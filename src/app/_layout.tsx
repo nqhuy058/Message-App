@@ -45,11 +45,28 @@ const RootLayout = () => {
               name="(auth)/signup.modal"
               options={{
                 headerShown: false,
-                animation: "fade",
+                // animation: "fade",
                 presentation: "transparentModal",
               }}
             />
 
+            <Stack.Screen
+              name="(auth)/request.password.modal"
+              options={{
+                headerShown: false,
+                // animation: "fade",
+                presentation: "transparentModal",
+              }}
+            />
+
+            <Stack.Screen
+              name="(auth)/forgot.password.modal"
+              options={{
+                headerShown: false,
+                // animation: "fade",
+                presentation: "transparentModal",
+              }}
+            />
 
           </Stack>
         </ThemeProvider>

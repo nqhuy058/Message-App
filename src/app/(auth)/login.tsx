@@ -153,7 +153,7 @@ const LoginPage = () => {
                                                     marginTop: 8
                                                 }}
                                             />
-                                            <Text style={styles.forgotPassword} onPress={() => alert("Chức năng quên mật khẩu đang được phát triển!")}>
+                                            <Text style={styles.forgotPassword} onPress={() => router.push("/(auth)/request.password.modal")}>
                                                 Quên mật khẩu?
                                             </Text>
                                         </View>
