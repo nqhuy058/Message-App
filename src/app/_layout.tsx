@@ -1,5 +1,4 @@
 
-import { APP_COLOR } from "@/utils/constant";
 import { DefaultTheme, ThemeProvider } from "@react-navigation/native";
 import { Stack } from "expo-router";
 import React from "react";
@@ -20,33 +19,42 @@ const RootLayout = () => {
   return (
     <GestureHandlerRootView>
       <RootSiblingParent>
-          {/* <SafeAreaView style={{ flex: 1 }}> */}
-          <ThemeProvider value={navTheme}>
-            <Stack
-              // screenOptions={
-              //   {
-              //     headerTintColor: APP_COLOR.ORANGE,
-              //     headerTitleStyle: {
-              //       color: "black"
-              //     },
-              //   }
-              // }
-            >
-              <Stack.Screen
-                name="index"
-                options={{ headerShown: false }}
-              />
+        {/* <SafeAreaView style={{ flex: 1 }}> */}
+        <ThemeProvider value={navTheme}>
+          <Stack
+          // screenOptions={
+          //   {
+          //     headerTintColor: APP_COLOR.ORANGE,
+          //     headerTitleStyle: {
+          //       color: "black"
+          //     },
+          //   }
+          // }
+          >
+            <Stack.Screen
+              name="index"
+              options={{ headerShown: false }}
+            />
 
-              <Stack.Screen
-                name="(auth)/login"
-                options={{ headerShown: false }}
-              />
+            <Stack.Screen
+              name="(auth)/login"
+              options={{ headerShown: false }}
+            />
+
+            <Stack.Screen
+              name="(auth)/signup.modal"
+              options={{
+                headerShown: false,
+                animation: "fade",
+                presentation: "transparentModal",
+              }}
+            />
 
 
-            </Stack>
-          </ThemeProvider>
-          {/* </SafeAreaView> */}
-  
+          </Stack>
+        </ThemeProvider>
+        {/* </SafeAreaView> */}
+
       </RootSiblingParent>
     </GestureHandlerRootView>
   )

@@ -159,7 +159,7 @@ const LoginPage = () => {
                                         </View>
 
                                         <View style={styles.bottomSection}>
-                                            <Pressable style={styles.createAccountButton} onPress={() => alert("Chức năng tạo tài khoản đang được phát triển!")}>
+                                            <Pressable style={styles.createAccountButton} onPress={() => router.push("/(auth)/signup.modal")}>
                                                 <Text style={styles.createAccountText}>Create new account</Text>
                                             </Pressable>
                                         </View>
